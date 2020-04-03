@@ -12,9 +12,14 @@ class ClickityClick extends React.Component {
     };
   }
  
-  handleClick = () => {
-    // Update our state here...
-  };
+   
+handleClick = () => {
+    this.setState(previousState => {
+      return {
+        count: previousState.count + 1
+      }
+    })
+  }
  
   render() {
     return (
@@ -27,19 +32,4 @@ class ClickityClick extends React.Component {
 }
  
 export default ClickityClick;
- 
-// src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
- 
-import ClickityClick from './components/ClickityClick';
- 
-ReactDOM.render(<ClickityClick />, document.getElementById('root'));
 
-handleClick = () => {
-    this.setState(previousState => {
-      return {
-        count: previousState.count + 1
-      }
-    })
-  }
